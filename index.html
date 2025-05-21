@@ -8,65 +8,90 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Inter', sans-serif;
+      background-color: #000;
       color: white;
-      overflow-x: hidden;
     }
 
     .hero {
-      background: url("wayne2.jpg") no-repeat center center/cover;
-      height: 100vh;
+      background: url("wayne1.jpg") no-repeat center center/cover;
+      height: 80vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
+      padding: 2rem;
     }
 
     .hero-text {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.6);
       padding: 2rem;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .cat-face {
-      font-size: 2rem;
-      line-height: 1.4;
+      font-size: 1.8rem;
     }
 
     .tagline {
-      margin-top: 1rem;
       font-style: italic;
+      margin-top: 0.5rem;
     }
 
-    .video-section {
+    .media-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
       padding: 4rem 1rem;
-      background-color: #111;
-      text-align: center;
+      background: #111;
     }
 
-    video {
-      width: 90%;
-      max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    video, .media-section img {
+      max-width: 100%;
+      width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
 
     .contact {
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
       background-color: #000;
       text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+    }
+
+    .contact p {
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .footer {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+        padding: 3rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <section class="hero">
     <div class="hero-text">
       <h1>WAYNE MY BABY</h1>
@@ -75,17 +100,23 @@
     </div>
   </section>
 
-  <section class="video-section">
-    <h2>Meet Wayne in Action</h2>
+  <section class="media-section">
     <video autoplay muted loop playsinline>
       <source src="waynevid.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+    <img src="wayne2.jpg" alt="Wayne being iconic" />
   </section>
 
   <section class="contact">
     <h2>Contact Us</h2>
-    <p>Drop us a line!</p>
+    <p>Drop us a line or just vibe.</p>
+    <!-- Placeholder form or future contact method -->
   </section>
+
+  <div class="footer">
+    © 2025 WayneMyBaby.com — built with paws and love.
+  </div>
+
 </body>
 </html>
