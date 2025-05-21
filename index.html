@@ -3,61 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waynemybaby.com</title>
+  <title>Wayne My Baby</title>
   <style>
-    body {
-      background-color: #ffffff;
-      font-family: Arial, sans-serif;
-      color: #111;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      background: url("wayne2.jpg") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 4rem 1rem;
+      position: relative;
     }
+
+    .hero-text {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
     h1 {
-      font-size: 2.25rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
-    pre.cat-art {
-      font-size: 1.25rem;
+
+    .cat-face {
+      font-size: 2rem;
       line-height: 1.4;
-      white-space: pre-wrap;
-      display: inline-block;
-      background-color: #f5f5f5;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-      text-align: left;
     }
+
     .tagline {
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      font-style: normal;
+      margin-top: 1rem;
+      font-style: italic;
     }
-    .wayne-pics {
-      margin-top: 2rem;
+
+    .video-section {
+      padding: 4rem 1rem;
+      background-color: #111;
+      text-align: center;
     }
-    .wayne-pics img {
-      max-width: 300px;
-      margin: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+
+    video {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .contact {
+      padding: 4rem 1rem;
+      background-color: #000;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>Waynemybaby.com? Yeah, they've got some really good cat shit</h1>
-  <pre class="cat-art">
-╱|、
-(˚ˎ 。7  
-|、˜〵  
-じしˍ,)ノ
-  </pre>
-  <div class="tagline">
-    Order your custom tee here. - Gibby
-  </div>
-  <div class="wayne-pics">
-    <img src="wayne2.JPG" alt="Wayne picture 1" />
-    <img src="wayne1.heic" alt="Wayne picture 2" />
-  </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>WAYNE MY BABY</h1>
+      <div class="cat-face">じしˍ,)ノ</div>
+      <div class="tagline">That's some good cat shit.</div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>Meet Wayne in Action</h2>
+    <video autoplay muted loop playsinline>
+      <source src="waynevid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Drop us a line!</p>
+  </section>
 </body>
 </html>
