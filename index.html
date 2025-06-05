@@ -157,6 +157,30 @@ video {
   <div class="footer">
     © 2025 WayneMyBaby.com — built with paws and love.
   </div>
+<div id="toeCounter" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.1);
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #0f0;
+  border-radius: 8px;
+  z-index: 9999;
+">
+  Toe Whacks: <span id="counterVal">0</span>
+</div>
 
+<script>
+  let toeWhacks = 0;
+
+  // This simulates a toe whack every 0.75 seconds
+  setInterval(() => {
+    toeWhacks++;
+    document.getElementById('counterVal').textContent = toeWhacks.toLocaleString();
+  }, 750);
+</script>
 </body>
 </html>
